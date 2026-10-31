@@ -1,0 +1,56 @@
+:root {
+  --fundo: #f7faf8;
+  --papel: #ffffff;
+  --tinta: #12302a;
+  --tinta-2: #4a6660;
+  --linha: #d8e6e1;
+  --menta: #1f8f72;
+  --menta-clara: #dff5ee;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fundo: #0c1f1b;
+    --papel: #12302a;
+    --tinta: #e6f4ef;
+    --tinta-2: #a4c2ba;
+    --linha: #24483f;
+    --menta: #6fddbf;
+    --menta-clara: #1a4238;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--fundo);
+  color: var(--tinta);
+  font: 17px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+a { color: var(--menta); }
+.miolo { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+header { border-bottom: 1px solid var(--linha); background: var(--papel); }
+header .miolo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 22px; padding-top: 14px; padding-bottom: 14px; }
+.marca { display: flex; align-items: center; gap: 10px; margin-right: auto; color: var(--tinta); font-weight: 700; text-decoration: none; }
+.marca img { width: 34px; height: 34px; }
+nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: 15px; }
+nav a { text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+main.miolo { padding-top: 44px; padding-bottom: 56px; }
+h1 { margin: 0 0 14px; font-size: clamp(30px, 6vw, 42px); line-height: 1.15; letter-spacing: -.01em; }
+h2 { margin: 40px 0 8px; font-size: 22px; line-height: 1.25; }
+.abertura { margin: 0; font-size: 19px; color: var(--tinta-2); }
+.data { margin: 0 0 8px; font-size: 15px; color: var(--tinta-2); }
+ul { padding-left: 22px; }
+li { margin: 6px 0; }
+
+.blocos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; margin: 18px 0 0; padding: 0; list-style: none; }
+.blocos li { margin: 0; padding: 16px 18px; background: var(--papel); border: 1px solid var(--linha); border-radius: 12px; }
+.blocos strong { display: block; margin-bottom: 2px; }
+
+.aviso { margin: 22px 0 0; padding: 14px 18px; background: var(--menta-clara); border-radius: 12px; }
+
+footer { border-top: 1px solid var(--linha); background: var(--papel); font-size: 15px; color: var(--tinta-2); }
+footer .miolo { display: flex; flex-wrap: wrap; gap: 6px 22px; padding-top: 20px; padding-bottom: 24px; }
+footer span { margin-right: auto; }
